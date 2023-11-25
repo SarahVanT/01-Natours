@@ -1,0 +1,44 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* ALL ELEMENTS will inherit border box from body */
+  box-sizing: inherit;
+}
+
+html {
+  /* If we use 10px we override the brower font size setting */
+  /* some users zoom in on a page, and the font size adjust */
+  /* With the fixed px, users won't be able to ajust properly */
+  /* font-size: 10px; */
+  /* 10 / 16 = 62.5 */
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    font-size: 56.25%; // 1rem = 8px 8/16 = 50%
+  }
+
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%;
+  }
+}
+
+body {
+  /* borders & padding no longer added to total width/height for a box */
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+::selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
