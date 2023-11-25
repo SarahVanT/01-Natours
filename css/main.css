@@ -466,11 +466,16 @@ body {
     width: 100%;
     padding: 7rem 4rem 4rem 4rem;
   }
+  .card__heading {
+    font-size: 3rem;
+    font-weight: 600;
+  }
   .card__price-box {
     margin-bottom: 3rem;
   }
   .card__price-value {
-    font-size: 4rem;
+    font-size: 5rem;
+    font-weight: 400;
     background: none;
   }
 }
